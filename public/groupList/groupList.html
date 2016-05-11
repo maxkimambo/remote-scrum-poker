@@ -1,0 +1,57 @@
+
+<div class="row">
+    <div class="col-md-6">
+        <h1>Groups</h1>
+    </div>
+    <div class="col-md-6">
+        <button 
+            type="button" 
+            class="btn btn-primary pull-right"
+            ng-bootbox-prompt="Group name"
+            ng-bootbox-prompt-action="$ctrl.createGroup(result)">
+            Create Group
+        </button>
+    </div>
+</div>
+
+<table class="table table-hover table-condensed">
+    <thead>
+        <th width="50%">Name</th>
+        <th width="30%">No of members</th>
+        <th width="10%"></th>
+        <th width="10%"></th>
+    </thead>
+    <tbody>
+        <tr 
+        ng-repeat="group in $ctrl.groups | orderBy: 'name'"
+        ng-mouseenter="hovering = true" 
+        ng-mouseleave="hovering = false">
+            <td><a href='#/group/{{group.$id}}'>{{group.name}}</a></td>
+            <td>{{group.noOfMembers}}</td>
+            <td class="pointable">
+                <span 
+                ng-show="hovering" 
+                class="glyphicon glyphicon-edit" 
+                ng-mouseenter="edithovering = true" 
+                ng-mouseleave="edithovering = false"
+                ng-class="{'hover-edit': edithovering}"
+                ng-bootbox-prompt="Group name"
+                ng-bootbox-prompt-default-value="{{group.name}}"
+                ng-bootbox-prompt-action="$ctrl.editGroup(group, result)"/>
+            </td>
+            <td class="pointable">
+                <span 
+                ng-show="hovering" 
+                class="glyphicon glyphicon-remove" 
+                ng-mouseenter="delhovering = true" 
+                ng-mouseleave="delhovering = false" 
+                ng-class="{'hover-delete': delhovering}"
+                ng-bootbox-confirm="Are you sure you want to delete this group?"
+                ng-bootbox-confirm-action="$ctrl.deleteGroup(group)"/>
+            </td>
+        </tr>
+        <tr ng-show="$ctrl.groups.length === 0">
+            <td colspan="4">No group available. Create a group or ask your Scrum Master to invite you!</td>
+        </tr>
+    </tbody>
+</table>

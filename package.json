@@ -1,0 +1,12 @@
+{
+  "name": "remote-scrum-poker",
+  "version": "1.0.0",
+  "description": "Remote Scrum Poker app",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "Francois Duchemin",
+  "license": "ISC"
+}

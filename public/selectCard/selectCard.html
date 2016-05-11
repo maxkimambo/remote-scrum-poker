@@ -1,0 +1,26 @@
+<nav></nav>
+
+<div class="row">
+    <div class="col-md-8">
+        <h1><a href="#/">Groups</a> | <a href="#/group/{{$ctrl.groupId}}">{{$ctrl.group.name}}</a> | Select Card</h1>
+    </div>
+    <div class="col-md-4">
+        <button 
+            type="button" 
+            class="btn btn-primary pull-right"
+            ng-bootbox-prompt="Email address"
+            ng-bootbox-prompt-action="$ctrl.addGroupMember(result)">
+            Add Member
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div ng-repeat="card in $ctrl.cards">
+        <div class="clearfix" ng-if="$index % 6 == 0"></div>
+        <div class="col-sm-2">
+            <button class="btn btn-success btn-lg btn-block card-button" ng-click="$ctrl.selectCard(card)">{{card.name}}</button>
+        </div>
+    </div>
+</div>
+

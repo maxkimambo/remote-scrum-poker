@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Remote Scrum Poker</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body class="container">
+    <span us-spinner spinner-on="showSpinner" spinner-key="spinner-1"></span>
+    
+    <ng-view></ng-view>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/libs/firebase-util/0.2.5/firebase-util.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="libs/bootbox.min.js"></script>
+    <script type="text/javascript" src="libs/ngBootbox.min.js"></script>
+    <script type="text/javascript" src="libs/spin.min.js"></script>
+    <script type="text/javascript" src="libs/angular-spinner.min.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+    <script type="text/javascript" src="/fbRef.js"></script>
+    <script type="text/javascript" src="/fbUrls.js"></script>
+    <script type="text/javascript" src="/home/home.js"></script>
+    <script type="text/javascript" src="/security/login.js"></script>
+    <script type="text/javascript" src="/security/logout.js"></script>
+    <script type="text/javascript" src="/nav/nav.js"></script>
+    <script type="text/javascript" src="/groupList/groupList.js"></script>
+    <script type="text/javascript" src="/group/group.js"></script>
+    <script type="text/javascript" src="/selectCard/selectCard.js"></script>
+    <script type="text/javascript" src="/signup/signup.js"></script>
+    <script type="text/javascript" src="/forgotPassword/forgotPassword.js"></script>
+    <script type="text/javascript" src="/help/help.js"></script>
+</body>    
+</html>
