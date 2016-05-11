@@ -7,3 +7,7 @@ An AngularJS application to estimate user stories with remote teams
 * **Invite group members**
 * **Estimate your user stories together**
 * **[iOS app](https://itunes.apple.com/us/app/remote-scrum-poker-agile-planning/id1104795876?mt=8) available**  
+
+## Getting Started
+
+* The application is available [here](https://remote-scrum-poker.firebaseapp.com/)
