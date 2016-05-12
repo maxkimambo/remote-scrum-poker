@@ -1,5 +1,5 @@
 # remote-scrum-poker
-An AngularJS application to estimate user stories with remote teams
+An AngularJS application using Firebase and AgularFire to estimate user stories with remote teams.
 
 ## Features
 
